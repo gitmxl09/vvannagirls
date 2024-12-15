@@ -1,60 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-height=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vvannagirls同人</title>
   <style>
-    #inputBox1,#inputBox2 {
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+  .input-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    input[type="text"] {
       border: 1px solid #ccc;
       border-radius: 5px;
       background-color: #f9f9f9;
-      padding: 5px;
-      font-size: 14px;
-      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #content {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      text-align: left;
+      min-width: 300px;
     }
   </style>
 </head>
+
 <body>
-  <input type="text" id="inputBox1" placeholder="请输入读者角色姓氏">
-  <input type="text" id="inputBox2" placeholder="请输入读者角色名字">
-  <span id="textContent1"></span>
-  <span id="textContent2"></span>
-  <!DOCTYPE html>
-  <title>vvannagirls同人</title>
-</head>
-  <button onclick="window.location.href='https://www.example1.com'">按钮 1</button><br>
-  <button onclick="window.location.href='https://www.example2.com'">按钮 2</button><br>
-  <button onclick="window.location.href='https://www.example3.com'">按钮 3</button><br>
-  <button onclick="window.location.href='https://www.example4.com'">按钮 4</button><br>
-  <button onclick="window.location.href='https://www.example5.com'">按钮 5</button><br>
+  <div class="input-container">
+    <input type="text" id="inputBox1" placeholder="请输入姓氏，最多十个字" maxlength="10">
+  </div>
+  <div class="input-container">
+    <input type="text" id="inputBox2" placeholder="请输入名字，最多十个字" maxlength="10">
+  </div>
+  <button onclick="showContent()">点击显示您的专属定制内容</button>
+
+  <div id="content">
+    <div id="displayParagraph">
+      <p>市郊区体育场，你和顾苏澄两个人有说有笑的走进场地。因为是休息日，所以人不算少，但对于大部分社畜来说休息日还是拿来补眠的，也着实不算多。</p>
+      <p>对于运动这件事，你不能说一窍不通，但也确实不算是专业选手，顾苏澄也是如此，而你们来这里的原因则是一个赌约。</p>
+      <p>顾苏澄一心想要打造一款以女性为主要用户群体的运动类 APP，然而身为技术人员的他，在UI设计方面短板尽显，审美也与目标群体存在偏差，于是便将目光投向了你。</p>
+      <p>“虽说设计领域有相通之处，可服装与 UI 终究是两码事，何况顾总，就您目前给出的条件，恐怕还请不动我的设计呢。” 你嘴角噙着一抹笑意，半开玩笑地说道。</p>
+      <p>“你之前可是答应过我，若我带你去赏樱花，设计费便可打八折。” 顾苏澄不慌不忙，自然而然地翻起旧账。</p>
+      <p>“我那时说的可是服装设计，” 你怎会不记得这件事，“资本家果然不吃亏啊。”</p>
+      <p>“我本就是商人，在商言商，投资皆有风险，不如来开一局？”他知道你的调侃并无恶意，顾苏澄也就顺着说了下去，“比点什么，如果我赢了就给我个折扣？”</p>
+      <p>“也好，看看现在正在转播什么运动项目，正好当锻炼了。”你抬起头，“马尔斯，打开体育频道。”</p>
+      <p>冰冷的电子音响起：“好的 <span id="textContent1_1"></span> 小姐。”</p>
+      <p>电视屏幕应声亮起，你与顾苏澄的目光同时投去，映入眼帘的是正在激烈进行的 WTA 巡回赛。</p>
+      <p>你转头看向顾苏澄，他的神色如常，你心有忐忑：“你会网球？”</p>
+      <p>“业余水平。”顾苏澄如实回答。</p>
+      <p>听闻此言，你暗自松了口气，还好只是两个业余爱好者的较量。</p>
+      <p>而现在，你们已换好运动服，完成热身，并肩站在球场上。</p>
+      <p>“谁来发球？”顾苏澄手里拿着球问你。</p>
+      <p>“按规矩掷硬币。”你变戏法一样从手里拿出一个硬币，向上抛去。</p>
+      <p>“正面。”顾苏澄开口。</p>
+      <p>“那我就反面。”你接住硬币，过了两秒才将手掌打开。</p>
+      <p>硬币正面朝上，顾苏澄决定由他自己先发球。</p>
+      <p>天高气朗，温度也正合适。</p>
+      <p>顾苏澄高高抛起球，身体如同一张拉满的弓一样，而后用力挥动手中的球拍。只见那绿色的网球如同一颗脱膛而出的炮弹，裹挟着高速旋转的气流，呼啸着飞过球网。</p>
+      <p>你心中一惊，这般发球速度已然逼近职业选手水准。好在只是接近，尚未真正企及，待球落地反弹的瞬间，你迅速反应，成功做出有效回击，且特意加大了击球力度。</p>
+      <p>你回过去的球虽速度稍逊于发球，但飞行角度极为刁钻。顾苏澄见状，敏捷地跨步上前，反手回抽。</p>
+      <p>几个来回下来，你们各有得失。</p>
+      <p>这一次顾苏澄回球用力不大，球贴着网带惊险飞了过去。</p>
+      <p>你不得已跑到中场的位置截击即将落地的球。</p>
+      <p>你抬头看向顾苏澄，他瞅准时机，直接高高跃起，施展出一记凌厉的扣杀。球落在地面而后又弹了几下滚到了场地线外。</p>
+      <p>你长舒一口气：“休息一下吧。”</p>
+      <p>小爱飞来飞去地向你们展示它刚才录下来的“精彩瞬间”，你看着那些录影，不由得感叹道：“你这业余也就是没时间进行专业的训练，否则也不是业余了。”</p>
+      <p>“你也不差。”顾苏澄递给你一瓶水。</p>
+      <p>“那你还不知道下手轻点，最后那一记扣杀，要是我判断失误直接去接，砸在身上可就得医院见了，小爱，他最后的那一下速度有多少？”</p>
+      <p>“最后一球速度达到了一百九十五公里每小时。”</p>
+      <p>……</p>
+      <p>“多少？”你有些不可置信，拿着瓶子的手都不由自主的用力起来，“一百九五，职业也未必能全都维持住这个速度！”你转头看向顾苏澄。</p>
+      <p>顾苏澄也露出微微惊讶的神情，他确实是没想到自己最后那一下的速度这么快，虽然之前打球的时候也会做一些记录，但扣杀时候的速度从没有过这么快。</p>
+      <p>“咳……嗯……巧合，全力以赴是对对手的尊重。”顾苏澄明显不知所措起来。</p>
+      <p>你喝了一口水压惊，看来自己那一枚硬币选错了。</p>
+      <p>休息了一段时间之后，你与顾苏澄继续，已经消耗了一些体力，这回明显不如之前有看点，最后以你连丢两分结束。</p>
+      <p>心痛，八折，亏了不少钱。</p>
+      <p>你在回去的路上还在心疼自己赚不到顾苏澄的钱这件事。</p>
+      <p>“硬币借我用一下。”顾苏澄坐在你身边说。</p>
+      <p>你从口袋里掏出硬币递给他。</p>
+      <p>顾苏澄向上一抛，而后稳稳接住问你：“猜一猜是正面还是反面？”</p>
+      <p>“反面。”</p>
+      <p>顾苏澄轻笑了一声，无奈对你说：“那你把手伸出来。”</p>
+      <p>你伸出手掌，顾苏澄的拳头翻了一下在你的掌心上打开，硬币落在你的掌心，是反面。</p>
+      <p>顾苏澄靠在椅子背上而后开口道：“我也能摸出来硬币正反面。”</p>
+      <p>你把硬币收回来，内心感叹——被看穿了。</p>
+      <p>几个月之后，端点科技发布新的APP，而在开发人员里面有你的名字—— <span id="textContent1_2"></span><span id="textContent2"></span>。</p>
+    </div>
+  </div>
+
   <script>
     const inputBox1 = document.getElementById('inputBox1');
     const inputBox2 = document.getElementById('inputBox2');
-    const textContent1 = document.getElementById('textContent1');
+    const textContent1_1 = document.getElementById('textContent1_1');
+    const textContent1_2 = document.getElementById('textContent1_2');
     const textContent2 = document.getElementById('textContent2');
-    function updateText(inputBox, textContent) {
-      textContent.textContent = inputBox.value;
-    }
-    inputBox1.addEventListener('input', () => updateText(inputBox1, textContent1));
-    inputBox2.addEventListener('input', () => updateText(inputBox2, textContent2));
-    function clearPlaceholderOnFocus(event) {
-      const target = event.target;
-      if (target.value === target.placeholder) {
-        target.value = '';
-      }
-    }
-    inputBox1.addEventListener('focus', clearPlaceholderOnFocus);
-    inputBox2.addEventListener('focus', clearPlaceholderOnFocus);
 
-    function setPlaceholderOnBlur(event) {
+    function updateText(inputBox, targetElements) {
+      targetElements.forEach(el => el.textContent = inputBox.value);
+    }
+
+    inputBox1.addEventListener('input', () => updateText(inputBox1, [textContent1_1, textContent1_2]));
+    inputBox2.addEventListener('input', () => updateText(inputBox2, [textContent2]));
+
+    function handlePlaceholder(event) {
       const target = event.target;
-      if (target.value === '') {
+      if (event.type === 'focus' && target.value === target.placeholder) {
+        target.value = '';
+      } else if (event.type === 'blur' && target.value === '') {
         target.value = target.placeholder;
       }
     }
-    inputBox1.addEventListener('blur', setPlaceholderOnBlur);
-    inputBox2.addEventListener('blur', setPlaceholderOnBlur);
+
+    const inputBoxes = [inputBox1, inputBox2];
+    inputBoxes.forEach(inputBox => {
+      inputBox.addEventListener('focus', handlePlaceholder);
+      inputBox.addEventListener('blur', handlePlaceholder);
+    });
+
+    function showContent() {
+      document.getElementById('content').style.display = 'block';
+    }
   </script>
 </body>
 
