@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #inputBox1,#inputBox2 {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      padding: 5px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="inputBox1" placeholder="请输入读者角色姓氏">
+  <input type="text" id="inputBox2" placeholder="请输入读者角色名字">
+  <span id="textContent1"></span>
+  <span id="textContent2"></span>
+  <script>
+    const inputBox1 = document.getElementById('inputBox1');
+    const inputBox2 = document.getElementById('inputBox2');
+    const textContent1 = document.getElementById('textContent1');
+    const textContent2 = document.getElementById('textContent2');
+    function updateText(inputBox, textContent) {
+      textContent.textContent = inputBox.value;
+    }
+    inputBox1.addEventListener('input', () => updateText(inputBox1, textContent1));
+    inputBox2.addEventListener('input', () => updateText(inputBox2, textContent2));
+    function clearPlaceholderOnFocus(event) {
+      const target = event.target;
+      if (target.value === target.placeholder) {
+        target.value = '';
+      }
+    }
+    inputBox1.addEventListener('focus', clearPlaceholderOnFocus);
+    inputBox2.addEventListener('focus', clearPlaceholderOnFocus);
+
+    function setPlaceholderOnBlur(event) {
+      const target = event.target;
+      if (target.value === '') {
+        target.value = target.placeholder;
+      }
+    }
+    inputBox1.addEventListener('blur', setPlaceholderOnBlur);
+    inputBox2.addEventListener('blur', setPlaceholderOnBlur);
+  </script>
+</body>
+
+</html>
